@@ -1,0 +1,20 @@
+{{#> layout title="Loading..." }}
+
+<div class="text-center mt-5">
+  <div class="spinner-border text-success mb-3" role="status"></div>
+  <h3>Connecting to Spotify…</h3>
+  <p class="text-muted">Please wait while we fetch your data</p>
+</div>
+
+<script>
+  const tokenData = {{{ tokenData }}};
+  const answerData = `{{ answerData }}`;
+
+  localStorage.setItem('access_token', tokenData.access_token);
+  localStorage.setItem('refresh_token', tokenData.refresh_token);
+  localStorage.setItem('answer', answerData);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  localStorage.setItem('answer', answerData)
+
+  window.location.href = '/results';
+</script>
+
+{{/layout}}
